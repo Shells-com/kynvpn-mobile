@@ -42,4 +42,4 @@ min-sdk = 24
 permissions = ["INTERNET", "ACCESS_NETWORK_STATE", "FOREGROUND_SERVICE", "FOREGROUND_SERVICE_SYSTEM_EXEMPTED", "POST_NOTIFICATIONS"]
 splash-background = "#0f1720"
 # The VpnService needs our own Java class and a <service> in the manifest;
-# both wait on stipple support for app-supplied classes (see docs/PLAN.md).
+# both wait on https://github.com/KarpelesLab/stipple/issues/67 (docs/PLAN.md, M2).

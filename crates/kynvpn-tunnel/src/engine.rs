@@ -24,7 +24,8 @@ use std::time::{Duration, Instant, SystemTime};
 /// How long a blocking read waits before checking whether to stop.
 const POLL: Duration = Duration::from_millis(250);
 /// How often the WireGuard timers run. pktkit asks for ~100 ms; this is the
-/// battery cost to remove once it can say when the next timer is due.
+/// battery cost to remove once it can say when the next timer is due
+/// (https://github.com/KarpelesLab/pktkit-rs/issues/12).
 const TIMER_TICK: Duration = Duration::from_millis(100);
 const MAINTENANCE_EVERY: Duration = Duration::from_secs(10);
 /// Packets held while the first handshake completes.
