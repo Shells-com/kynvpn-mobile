@@ -11,7 +11,7 @@ WireGuard from [pktkit](https://github.com/KarpelesLab/pktkit-rs).
 | `crates/kynvpn-core` | Platform-neutral model: keys, tunnel configuration (`wg-quick` import), config sources |
 | `crates/kynvpn-tunnel` | The WireGuard engine: pktkit's `wg::Handler` between a TUN device and a UDP socket |
 | `app` | The Stipple app (`cdylib` for Android, binary for iOS and a desktop preview) and the bridge to each platform's VPN service |
-| `platform/android`, `platform/ios` | The platform VPN service code (Android `VpnService`, iOS Packet Tunnel extension) |
+| `platform/android`, `platform/ios` | The platform VPN service code (Android `VpnService`, iOS Packet Tunnel extension); coming in M2 and M3 |
 | `docs/PLAN.md` | Architecture and the work plan |
 
 ## Building
