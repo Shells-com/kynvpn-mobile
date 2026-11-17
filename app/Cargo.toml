@@ -1,0 +1,45 @@
+[package]
+name = "kynvpn"
+description = "kynvpn for Android and iOS"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[lib]
+name = "kynvpn"
+# cdylib: the Android NativeActivity library; rlib: what main.rs (iOS, desktop preview) uses.
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "kynvpn"
+path = "src/main.rs"
+
+[dependencies]
+kynvpn-core.workspace = true
+stipple.workspace = true
+
+[package.metadata.stipple]
+id = "com.kynvpn.app"
+name = "kynvpn"
+build = 1
+icon = "icons/app.svg"
+icon-background = "#0f1720"
+orientations = ["portrait"]
+languages = ["en"]
+
+[package.metadata.stipple.ios]
+minimum-os = "15.0"
+device-family = ["iphone", "ipad"]
+# WireGuard (ChaCha20-Poly1305, Curve25519) is not exempt the way HTTPS is.
+uses-encryption = true
+
+[package.metadata.stipple.android]
+lib-name = "kynvpn"
+min-sdk = 24
+permissions = ["INTERNET", "ACCESS_NETWORK_STATE", "FOREGROUND_SERVICE", "FOREGROUND_SERVICE_SYSTEM_EXEMPTED", "POST_NOTIFICATIONS"]
+splash-background = "#0f1720"
+# The VpnService needs our own Java class and a <service> in the manifest;
+# both wait on stipple support for app-supplied classes (see docs/PLAN.md).

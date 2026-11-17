@@ -1,0 +1,17 @@
+[package]
+name = "kynvpn-tunnel"
+description = "The kynvpn WireGuard engine: pktkit's wg::Handler between a TUN device and a UDP socket"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+publish = false
+
+[dependencies]
+kynvpn-core = { path = "../kynvpn-core" }
+pktkit.workspace = true
+thiserror.workspace = true
+
+[target.'cfg(unix)'.dependencies]
+libc.workspace = true

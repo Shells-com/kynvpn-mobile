@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Placeholder until the kynvpn brand assets land. -->
+  <path d="M512 160 L800 272 V496 C800 680 676 816 512 880 C348 816 224 680 224 496 V272 Z"
+        fill="none" stroke="#38bdf8" stroke-width="56" stroke-linejoin="round"/>
+  <path d="M392 512 L480 600 L640 424" fill="none" stroke="#38bdf8" stroke-width="56"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
